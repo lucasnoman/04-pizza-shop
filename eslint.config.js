@@ -7,6 +7,7 @@ import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import pluginPromise from 'eslint-plugin-promise'
+import tailwind from 'eslint-plugin-tailwindcss'
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -35,4 +36,5 @@ export default tseslint.config(
   eslintConfigPrettier,
   eslintPluginPrettierRecommended,
   pluginPromise.configs['flat/recommended'],
+  ...tailwind.configs['flat/recommended'],
 )
